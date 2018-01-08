@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <!-- TODO be aware of external css --><link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <title>Shotokan Karate</title>
+    </head>
+ <body>
+<!-- Navigation -->
+<nav id="menuBar" class="w3-bar w3-black">
+  <a id="menu" href="#" onclick="menuOptions('home'); return false;" class="w3-button w3-bar-item">Home</a>
+  <a id="menu" href="#" onclick="menuOptions('hours'); return false;" class="w3-button w3-bar-item">Hours</a>
+  <a id="menu" href="#" onclick="menuOptions('other'); return false;" class="w3-button w3-bar-item">Other</a>
+  <a id="menu" href="#" onclick="menuOptions('contact'); return false;" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  This is an alert box.
+</div>
+<div class="info">
+  <p><strong>Info!</strong> Some text...</p>
+</div>
+<div id="heading">
+<h1></h1>
+<div id="hours" class="options">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <h2>Hours of Operation:</h2>
+  <div id="hoursText"></div> 
+</div>
+<div id="contact" class="options">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <div id="contactText"><h2>Contact Information:</h2></div>
+</div>
+<div id="other" class="options">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <div id="otherText"><h2>Other Information:</h2></div> 
+</div>
+</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

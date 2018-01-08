@@ -17,9 +17,21 @@ $(document).ready(function(){
 
 var testJSON = '{"open": "8:00","close": "5:00","days": "Monday - Thursday"}';
 
+//document.getElementById("menu").addEventListener("click", menuOptions);
+
+function menuOptions(itemClicked){
+	var menuContent = document.getElementsByClassName("options");
+	for (var i = 0; i < menuContent.length; i++) {
+		menuContent[i].style.display = "none";
+	}
+	if (itemClicked != 'home') {
+		document.getElementById(itemClicked).style.display='block';
+	}
+	
+}
 function loadJSON(callback){
 	callback(testJSON);
-	
+/*
 	var xobj = new XMLHttpRequest();
 	xobj.overrideMimeType("application/json");
 	xobj.open('GET', 'data.json', true);
@@ -30,14 +42,15 @@ function loadJSON(callback){
 		}
 	}
 	xobj.send(null);
-
+*/
 }
 
 // Call to function with anonymous callback
 loadJSON(function(response) {
 	// Do Something with the response e.g.
 	jsonresponse = JSON.parse(response);
-	var hourOpen = jsonresponse.days + ": " + jsonresponse.open + " - " + jsonresponse.close; 
-	document.write("<h2>" + hourOpen + "</h2>");
+	var hourOpen = jsonresponse.days + ": " + jsonresponse.open + " - " + jsonresponse.close;
+	document.getElementById("hoursText").innerHTML = "<h3>" + hourOpen + "</h3>";
 
 });
+

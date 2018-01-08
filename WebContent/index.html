@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TODO be aware of external css --><link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
 <link rel="stylesheet" type="text/css" href="base.css">
+
 <title>Shotokan Karate</title>
 </head>
 <body>
-<div align="center">
-<div class="rounded-list">
-<ol>
-<li>
-<table>
-	<tr>
-		<td>
-			<a href="hours.html"><b>Hours of Operation</b> <small>Find out what our hours are</small></a>
-			<a href="other.html"><b>Other things</b> <small>This is for other things</small></a>
-		</td>
-	</tr>
-</table>
-</li>
-</ol>
+<!-- Navigation -->
+<nav id="menuBar" class="w3-bar w3-black">
+  <a id="menu" href="#" onclick="menuOptions('home'); return false;" class="w3-button w3-bar-item">Home</a>
+  <a id="menu" href="#" onclick="menuOptions('hours'); return false;" class="w3-button w3-bar-item">Hours</a>
+  <a id="menu" href="#" onclick="menuOptions('other'); return false;" class="w3-button w3-bar-item">Other</a>
+  <a id="menu" href="#" onclick="menuOptions('contact'); return false;" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  This is an alert box.
+</div>
+<div class="info">
+  <p><strong>Info!</strong> Some text...</p>
+</div>
+<div id="heading">
+<h1></h1>
+<div id="hours" class="options">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <h2>Hours of Operation:</h2>
+  <div id="hoursText"></div> 
+</div>
+<div id="contact" class="options">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <div id="contactText"><h2>Contact Information:</h2></div>
+</div>
+<div id="other" class="options">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <div id="otherText"><h2>Other Information:</h2></div> 
 </div>
 </div>
-<script type="text/javascript" src="base.js"></script>
+<script src="base.js"></script>
 </body>
 </html>

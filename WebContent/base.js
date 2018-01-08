@@ -1,7 +1,7 @@
 /**
  * 
  */
-/* JSON Example
+/* JSON Example 
 $(document).ready(function(){
     $("#getOpsview").click(function(){
 		 console.log("click Opsview");

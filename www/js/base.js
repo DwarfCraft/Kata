@@ -19,16 +19,22 @@ $(document).ready(function(){
 */
 
 function appMain() {
-var testJSON = '{"open": "8:00","close": "5:00","days": "Monday - Thursday"}';
-//Call to function with anonymous callback
-loadJSON(function(response) {
-	// Do Something with the response e.g.
-	jsonresponse = JSON.parse(response);
-	var hourOpen = jsonresponse.days + ": " + jsonresponse.open + " - " + jsonresponse.close;
-	document.getElementById("hoursText").innerHTML = "<h3>" + hourOpen + "</h3>";
+	
+	var testJSON = '{"open": "8:00","close": "5:00","days": "Monday - Thursday"}';
+	//Call to function with anonymous callback
+	loadJSON(function(response) {
+		// Do Something with the response e.g.
+		jsonresponse = JSON.parse(response);
+		var hourOpen = jsonresponse.days + ": " + jsonresponse.open + " - " + jsonresponse.close;
+		document.getElementById("hoursText").innerHTML = "<h3>" + hourOpen + "</h3>";
+	
+	});
+	document.getElementById("menu").addEventListener("click", menuOptions);
+	document.getElementsByClassName("closebtn").addEventListener("click", alertClick);
+}
 
-});
-//document.getElementById("menu").addEventListener("click", menuOptions);
+function alertClick() {
+	document.getElementById("alert").style.display='none';
 }
 
 function menuOptions(itemClicked){

@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-eval' 'unsafe-inline' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline' ; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -39,15 +39,15 @@
  <body>
 <!-- Navigation -->
 <nav id="menuBar" class="w3-bar w3-black">
-  <a id="menu" href="#" onclick="menuOptions('home'); return false;" class="w3-button w3-bar-item">Home</a>
-  <a id="menu" href="#" onclick="menuOptions('hours'); return false;" class="w3-button w3-bar-item">Hours</a>
-  <a id="menu" href="#" onclick="menuOptions('other'); return false;" class="w3-button w3-bar-item">Other</a>
-  <a id="menu" href="#" onclick="menuOptions('contact'); return false;" class="w3-button w3-bar-item">Contact</a>
+  <a id="menuHome" href="#" class="w3-button w3-bar-item">Home</a>
+  <a id="menuHours" href="#" class="w3-button w3-bar-item">Hours</a>
+  <a id="menuOther" href="#" class="w3-button w3-bar-item">Other</a>
+  <a id="menuContact" href="#" class="w3-button w3-bar-item">Contact</a>
 </nav>
 
 
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+<div id="alert" class="alert">
+  <span class="closebtn">&times;</span> 
   This is an alert box.
 </div>
 <div class="info">
@@ -56,16 +56,16 @@
 <div id="heading">
 <h1></h1>
 <div id="hours" class="options">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <span class="closebtn">&times;</span> 
   <h2>Hours of Operation:</h2>
   <div id="hoursText"></div> 
 </div>
 <div id="contact" class="options">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <span class="closebtn">&times;</span> 
   <div id="contactText"><h2>Contact Information:</h2></div>
 </div>
 <div id="other" class="options">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <span class="closebtn">&times;</span> 
   <div id="otherText"><h2>Other Information:</h2></div> 
 </div>
 </div>

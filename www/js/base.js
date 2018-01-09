@@ -29,25 +29,15 @@ function appMain() {
 		document.getElementById("hoursText").innerHTML = "<h3>" + hourOpen + "</h3>";
 	
 	});
-	document.getElementById("menu").addEventListener("click", menuOptions);
-	document.getElementsByClassName("closebtn").addEventListener("click", alertClick);
+	
 }
 
 function alertClick() {
 	document.getElementById("alert").style.display='none';
 }
 
-function menuOptions(itemClicked){
-	var menuContent = document.getElementsByClassName("options");
-	for (var i = 0; i < menuContent.length; i++) {
-		menuContent[i].style.display = "none";
-	}
-	if (itemClicked != 'home') {
-		document.getElementById(itemClicked).style.display='block';
-	}
-	
-}
-function loadJSON(callback){
+
+function loadJSON(callback) {
 	callback(testJSON);
 /*
 	var xobj = new XMLHttpRequest();
@@ -63,3 +53,53 @@ function loadJSON(callback){
 */
 }
 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+//Listeners
+var closeIcons = document.getElementsByClassName("closebtn");
+for (i = 0; i < closeIcons.length; i++) {
+	if (closeIcons[i].id != "menuClose") {
+		closeIcons[i].addEventListener("click", alertClick);
+	}
+}
+
+var menuOptions = document.getElementsByClassName("menu");
+for (i = 0; i < menuOptions.length; i++) {
+	if (menuOptions[i].id == "menuHours") {
+		menuOptions[i].addEventListener("click", function() {document.getElementById("hours").style.display='block';});
+	}
+	if (menuOptions[i].id == "menuContact") {
+		menuOptions[i].addEventListener("click", function() {document.getElementById("contact").style.display='block';});
+	}
+	if (menuOptions[i].id == "menuOther") {
+		menuOptions[i].addEventListener("click", function() {document.getElementById("other").style.display='block';});
+	}
+	if (menuOptions[i].id == "menuHome") {
+		menuOptions[i].addEventListener("click", function() {	
+			var menuContent = document.getElementsByClassName("options");
+			for (var i = 0; i < menuContent.length; i++) {
+				menuContent[i].style.display = "none";
+			}
+		});
+	}	
+	//menuOptions[i].addEventListener("click", menuHandler(menuOptions[i].id));
+}
+/*
+	var menuContent = document.getElementsByClassName("options");
+	for (var i = 0; i < menuContent.length; i++) {
+		menuContent[i].style.display = "none";
+	}
+	if (itemClicked != 'menuHome') {
+		document.getElementById(itemClicked).style.display='block';
+	}
+	
+*/
+
+document.getElementById("menuButton").addEventListener("click", openNav);
+document.getElementById("menuClose").addEventListener("click", closeNav);

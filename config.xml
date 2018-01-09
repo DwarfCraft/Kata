@@ -4,8 +4,8 @@
     <description>
         An Adam App.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="adam15free@hotmail.com" href="http://localhost">
+        Adam Holmes
     </author>
     <content src="index.html" />
     <access origin="*" />

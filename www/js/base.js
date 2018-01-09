@@ -18,24 +18,15 @@ $(document).ready(function(){
 });
 */
 
-function appMain() {
-	
-	var testJSON = '{"open": "8:00","close": "5:00","days": "Monday - Thursday"}';
-	//Call to function with anonymous callback
-	loadJSON(function(response) {
-		// Do Something with the response e.g.
-		jsonresponse = JSON.parse(response);
-		var hourOpen = jsonresponse.days + ": " + jsonresponse.open + " - " + jsonresponse.close;
-		document.getElementById("hoursText").innerHTML = "<h3>" + hourOpen + "</h3>";
-	
-	});
-	
-}
+var testJSON = '{"open": "8:00","close": "5:00","days": "Monday - Thursday"}';
+//Call to function with anonymous callback
+loadJSON(function(response) {
+	// Do Something with the response e.g.
+	jsonresponse = JSON.parse(response);
+	var hourOpen = jsonresponse.days + ": " + jsonresponse.open + " - " + jsonresponse.close;
+	document.getElementById("hoursText").innerHTML = "<h3>" + hourOpen + "</h3>";
 
-function alertClick() {
-	document.getElementById("alert").style.display='none';
-}
-
+});
 
 function loadJSON(callback) {
 	callback(testJSON);
@@ -64,8 +55,18 @@ function closeNav() {
 //Listeners
 var closeIcons = document.getElementsByClassName("closebtn");
 for (i = 0; i < closeIcons.length; i++) {
-	if (closeIcons[i].id != "menuClose") {
-		closeIcons[i].addEventListener("click", alertClick);
+	console.log(closeIcons[i]);
+	if (closeIcons[i].parentElement.id == "alert") {
+		closeIcons[i].addEventListener("click", function() {document.getElementById("alert").style.display='none';});
+	}
+	if (closeIcons[i].parentElement.id == "hours") {
+		closeIcons[i].addEventListener("click", function() {document.getElementById("hours").style.display="none";});
+	}
+	if (closeIcons[i].parentElement.id == "other") {
+		closeIcons[i].addEventListener("click", function() {document.getElementById("other").style.display="none";});
+	}	
+	if (closeIcons[i].parentElement.id == "contact") {
+		closeIcons[i].addEventListener("click", function() {document.getElementById("contact").style.display="none";});
 	}
 }
 
@@ -90,6 +91,7 @@ for (i = 0; i < menuOptions.length; i++) {
 	}	
 	//menuOptions[i].addEventListener("click", menuHandler(menuOptions[i].id));
 }
+
 /*
 	var menuContent = document.getElementsByClassName("options");
 	for (var i = 0; i < menuContent.length; i++) {
@@ -103,3 +105,5 @@ for (i = 0; i < menuOptions.length; i++) {
 
 document.getElementById("menuButton").addEventListener("click", openNav);
 document.getElementById("menuClose").addEventListener("click", closeNav);
+
+

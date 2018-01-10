@@ -79,13 +79,13 @@ for (i = 0; i < closeIcons.length; i++) {
 var menuOptions = document.getElementsByClassName("menu");
 for (i = 0; i < menuOptions.length; i++) {
 	if (menuOptions[i].id == "menuHours") {
-		menuOptions[i].addEventListener("click", function() {document.getElementById("hours").style.display='block';closeNav();});
+		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("hours").style.display='block';closeNav();});
 	}
 	if (menuOptions[i].id == "menuContact") {
-		menuOptions[i].addEventListener("click", function() {document.getElementById("contact").style.display='block';closeNav();});
+		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("contact").style.display='block';closeNav();});
 	}
 	if (menuOptions[i].id == "menuOther") {
-		menuOptions[i].addEventListener("click", function() {document.getElementById("other").style.display='block';closeNav();});
+		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("other").style.display='block';closeNav();});
 	}
 	if (menuOptions[i].id == "menuHome") {
 		menuOptions[i].addEventListener("click", function() {	
@@ -99,6 +99,13 @@ for (i = 0; i < menuOptions.length; i++) {
 	//menuOptions[i].addEventListener("click", menuHandler(menuOptions[i].id));
 }
 
+function closePage() {
+	var menuContent = document.getElementsByClassName("page");
+	for (var i = 0; i < menuContent.length; i++) {
+		menuContent[i].style.display = "none";
+	}
+	
+}
 /*
 	var menuContent = document.getElementsByClassName("options");
 	for (var i = 0; i < menuContent.length; i++) {

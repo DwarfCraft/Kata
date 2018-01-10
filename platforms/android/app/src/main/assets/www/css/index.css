@@ -114,7 +114,7 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-@charset "ISO-8859-1";
+
 body {
     background-color: #000000;
 }
@@ -150,10 +150,10 @@ p {
     color: white;
     font-weight: bold;
     float: right;
-    font-size: 22px;
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
+    font-size:30px;
 }
 
 /* When moving the mouse over the close button */
@@ -207,4 +207,9 @@ div {
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+.mySidenav {
+	width: 200px;
+	right: 0;
 }

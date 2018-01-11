@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 10 23:09:44 EST 2018
+#Thu Jan 11 00:10:40 EST 2018
 25.file=/home/adam/git/Kata/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/res/mipmap-hdpi-v4/icon.png
 25.base=/home/adam/git/Kata/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 22.set=ASSET

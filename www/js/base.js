@@ -20,6 +20,11 @@ $(document).ready(function(){
 
 var testJSON = '{"open": "8:00","close": "5:00","days": "Monday - Thursday"}';
 var contactJSON = '{"name": "Adam Holmes","phone": "123-123-1234","email": "adam@adam.com"}';
+var aboutJSON = '{"info": "This is karate at its finest!"}';
+var newStudentJSON = '{"info": "New Students get two free lessons."}';
+var glossaryJSON = '{"info": "first kata"}';
+var formsJSON = '{"info": "forms to use"}';
+
 //Call to function with anonymous callback
 loadJSON(function(response) {
 	// Do Something with the response e.g.
@@ -30,6 +35,22 @@ loadJSON(function(response) {
 	var contactResponse = JSON.parse(contactJSON);
 	var contactInfo = contactResponse.name + "<br>" + contactResponse.phone + "<br>" + contactResponse.email;
 	document.getElementById("contactText").innerHTML = "<h3>" + contactInfo + "</h3>";
+
+	var aboutResponse = JSON.parse(aboutJSON);
+	var aboutInfo = aboutResponse.info + "<br>";
+	document.getElementById("aboutText").innerHTML = "<h3>" + aboutInfo + "</h3>";
+
+	var newStudentResponse = JSON.parse(newStudentJSON);
+	var newStudentInfo = aboutResponse.info + "<br>";
+	document.getElementById("newStudentText").innerHTML = "<h3>" + newStudentInfo + "</h3>";
+
+	var glossaryResponse = JSON.parse(glossaryJSON);
+	var glossaryInfo = glossaryResponse.info + "<br>";
+	document.getElementById("glossaryText").innerHTML = "<h3>" + glossaryInfo + "</h3>";
+
+	var formsResponse = JSON.parse(formsJSON);
+	var formsInfo = formsResponse.info + "<br>";
+	document.getElementById("formsText").innerHTML = "<h3>" + formsInfo + "</h3>";
 });
 
 function loadJSON(callback) {
@@ -65,15 +86,6 @@ for (i = 0; i < closeIcons.length; i++) {
 	if (closeIcons[i].parentElement.id == "alert") {
 		closeIcons[i].addEventListener("click", function() {document.getElementById("alert").style.display='none';});
 	}
-	if (closeIcons[i].parentElement.id == "hours") {
-		closeIcons[i].addEventListener("click", function() {document.getElementById("hours").style.display="none";});
-	}
-	if (closeIcons[i].parentElement.id == "other") {
-		closeIcons[i].addEventListener("click", function() {document.getElementById("other").style.display="none";});
-	}	
-	if (closeIcons[i].parentElement.id == "contact") {
-		closeIcons[i].addEventListener("click", function() {document.getElementById("contact").style.display="none";});
-	}
 }
 
 var menuOptions = document.getElementsByClassName("menu");
@@ -84,8 +96,17 @@ for (i = 0; i < menuOptions.length; i++) {
 	if (menuOptions[i].id == "menuContact") {
 		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("contact").style.display='block';closeNav();});
 	}
-	if (menuOptions[i].id == "menuOther") {
-		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("other").style.display='block';closeNav();});
+	if (menuOptions[i].id == "menuAbout") {
+		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("about").style.display='block';closeNav();});
+	}
+	if (menuOptions[i].id == "menuNewStudent") {
+		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("newStudent").style.display='block';closeNav();});
+	}
+	if (menuOptions[i].id == "menuGlossary") {
+		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("glossary").style.display='block';closeNav();});
+	}
+	if (menuOptions[i].id == "menuForms") {
+		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("forms").style.display='block';closeNav();});
 	}
 	if (menuOptions[i].id == "menuHome") {
 		menuOptions[i].addEventListener("click", function() {	
@@ -93,6 +114,7 @@ for (i = 0; i < menuOptions.length; i++) {
 			for (var i = 0; i < menuContent.length; i++) {
 				menuContent[i].style.display = "none";
 			}
+			document.getElementById("infoBlock").style.display = "block";
 			closeNav();
 		});
 	}	
@@ -104,6 +126,7 @@ function closePage() {
 	for (var i = 0; i < menuContent.length; i++) {
 		menuContent[i].style.display = "none";
 	}
+	document.getElementById("infoBlock").style.display = "none";
 	
 }
 /*

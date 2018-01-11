@@ -26,6 +26,15 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="www/img/logo.png" />
     <allow-intent href="market:*" />
+    <splash density="land-hdpi" src="www/img/logo.png" />
+    <splash density="land-ldpi" src="www/img/logo.png" />
+    <splash density="land-mdpi" src="www/img/logo.png" />
+    <splash density="land-xhdpi" src="www/img/logo.png" />
+    <splash density="port-hdpi" src="www/img/logo.png" />
+    <splash density="port-ldpi" src="www/img/logo.png" />
+    <splash density="port-mdpi" src="www/img/logo.png" />
+    <splash density="port-xhdpi" src="www/img/logo.png" />
     <preference name="loglevel" value="DEBUG" />
 </widget>

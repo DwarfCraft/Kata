@@ -17,24 +17,22 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-            <!-- you can use any density that exists in the Android project -->
-		    <splash src="www/img/logo.png" density="land-hdpi"/>
-		    <splash src="www/img/logo.png" density="land-ldpi"/>
-		    <splash src="www/img/logo.png" density="land-mdpi"/>
-		    <splash src="www/img/logo.png" density="land-xhdpi"/>
-		
-		    <splash src="www/img/logo.png" density="port-hdpi"/>
-		    <splash src="www/img/logo.png" density="port-ldpi"/>
-		    <splash src="www/img/logo.png" density="port-mdpi"/>
-		    <splash src="www/img/logo.png" density="port-xhdpi"/>
+        <splash density="land-hdpi" src="www/img/logo.png" />
+        <splash density="land-ldpi" src="www/img/logo.png" />
+        <splash density="land-mdpi" src="www/img/logo.png" />
+        <splash density="land-xhdpi" src="www/img/logo.png" />
+        <splash density="port-hdpi" src="www/img/logo.png" />
+        <splash density="port-ldpi" src="www/img/logo.png" />
+        <splash density="port-mdpi" src="www/img/logo.png" />
+        <splash density="port-xhdpi" src="www/img/logo.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <icon src="www/img/logo.png" />
     <engine name="android" spec="^7.0.0" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.1" />
-    <icon src="www/img/logo.png" />
 </widget>

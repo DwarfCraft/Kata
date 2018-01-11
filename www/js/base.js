@@ -91,7 +91,8 @@ for (i = 0; i < closeIcons.length; i++) {
 var menuOptions = document.getElementsByClassName("menu");
 for (i = 0; i < menuOptions.length; i++) {
 	if (menuOptions[i].id == "menuHours") {
-		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("hours").style.display='block';closeNav();});
+		//menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("hours").style.display='block';closeNav();});
+		menuOptions[i].addEventListener("click", function() {menuClick("hours")});
 	}
 	if (menuOptions[i].id == "menuContact") {
 		menuOptions[i].addEventListener("click", function() {closePage();document.getElementById("contact").style.display='block';closeNav();});
@@ -119,6 +120,12 @@ for (i = 0; i < menuOptions.length; i++) {
 		});
 	}	
 	//menuOptions[i].addEventListener("click", menuHandler(menuOptions[i].id));
+}
+
+function menuClick(item) {
+	closePage();
+	document.getElementById(item).style.display = "block";
+	closeNav();
 }
 
 function closePage() {

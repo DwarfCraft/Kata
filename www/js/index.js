@@ -28,8 +28,10 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-    },
 
+    },
+    
+    
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -38,11 +40,20 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
+        
+        //document.addEventListener("backbutton", onBackKeyDown, false);
+        
         console.log('Received Event: ' + id);
     }
 };
-
+/*
+function onBackKeyDown() {
+    // Handle the back button
+	if (document.getElementById("mySidenav").style.display == "none") {
+		openNav();
+	}
+}
+*/
 app.initialize();
 
 

@@ -17,7 +17,36 @@ $(document).ready(function(){
     });
 });
 */
+/*
+ * Programs & Class Schedule
+Lil Dragons Ages 6-7yrs.
 
+Beginner Kids Ages 8-13.
+
+Intermediate Kids Ages 8-13
+
+Advanced Kids Ages 8-13
+
+Beginner / Intermediate Adults
+
+Advanced Adults
+
+Tiger Team - Elite Competition Team 
+Monday: 3:00 – 8:00 PM 
+Tuesday: 3:00 – 8:00 PM 
+Wednesday: 3:00 – 8:00 PM 
+Thursday: 3:00 – 8:00 PM 
+Friday: Closed 
+Saturday: Closed 
+Sunday: Closed
+
+
+
+528 Columbia Ave
+Lexington, SC 29072
+United States
+Phone: 803-359-3632
+ */
 var testJSON = '{"open": "8:00","close": "5:00","days": "Monday - Thursday"}';
 var contactJSON = '{"name": "Adam Holmes","phone": "123-123-1234","email": "adam@adam.com"}';
 var aboutJSON = '{"info": "This is karate at its finest!"}';

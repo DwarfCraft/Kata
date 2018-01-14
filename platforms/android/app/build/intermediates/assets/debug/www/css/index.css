@@ -24,15 +24,15 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-color:#729fcf;
+    background-image:linear-gradient(top, #729fcf 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #729fcf 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #729fcf 0%, #E4E4E4 51%);
     background-image:-webkit-gradient(
         linear,
         left top,
         left bottom,
-        color-stop(0, #A7A7A7),
+        color-stop(0, #729fcf),
         color-stop(0.51, #E4E4E4)
     );
     background-attachment:fixed;
@@ -79,22 +79,22 @@ h1 {
 }
 
 .event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    margin: 0px 30px;
+    padding: 2px 0px;
 }
 
 .event.listening {
-    background-color:#333333;
-    display:block;
+    background-color: #333333;
+    display: block;
 }
 
 .event.received {
-    background-color:#4B946A;
-    display:none;
+    background-color: #4B946A;
+    display: none;
 }
 
 @keyframes fade {
@@ -116,7 +116,7 @@ h1 {
 
 
 body {
-    background-color: #000000;
+    background-color: black;
 }
 
 h1 {
@@ -139,7 +139,7 @@ p {
 /* The alert message box */
 .alert {
     padding: 20px;
-    background-color: #f44336; /* Red */
+    background-color: red; /* Red */
     color: white;
     margin-bottom: 15px;
 }

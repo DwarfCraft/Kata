@@ -17,9 +17,35 @@ $(document).ready(function(){
     });
 });
 */
+/*
+ * Programs & Class Schedule
+Lil Dragons Ages 6-7yrs.
 
-var testJSON = '{"open": "8:00","close": "5:00","days": "Monday - Thursday"}';
-var contactJSON = '{"name": "Adam Holmes","phone": "123-123-1234","email": "adam@adam.com"}';
+Beginner Kids Ages 8-13.
+
+Intermediate Kids Ages 8-13
+
+Advanced Kids Ages 8-13
+
+Beginner / Intermediate Adults
+
+Advanced Adults
+
+Tiger Team - Elite Competition Team 
+Monday: 3:00 – 8:00 PM 
+Tuesday: 3:00 – 8:00 PM 
+Wednesday: 3:00 – 8:00 PM 
+Thursday: 3:00 – 8:00 PM 
+Friday: Closed 
+Saturday: Closed 
+Sunday: Closed
+
+*/
+//var hoursJSON = '{ "Hours" : [ { "Monday": [{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Tuesday":[{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Wednesday":[{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Thursday":[{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Friday":[{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Saturday":[]},{ "Sunday":[]}]}';
+//var hoursJSON = '"Days": [{"Monday": ';
+var hoursJSON = '{"Days": [{ "day": "Monday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Tuesday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Wednesday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Thursday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Friday", "open": "Closed", "close": "Closed"},{ "day": "Saturday", "open": "Closed", "close": "Closed"},{ "day": "Sunday", "open": "Closed", "close": "Closed"}], "Classes": [{ "classes": "Beginner Adults", "day": "Monday", "start": "6:00PM", "finish": "6:45PM" }]}';
+var testJSON = '{"hours": "","open": "8:00","close": "5:00","days": "Monday - Thursday"}';
+var contactJSON = '{"name": "Drew Taylor", "phone": "803-359-3632", "email": "skc@gmail.com", "address": "528 Columbia Ave <br>Lexington, SC 29072 <br>United States"}';
 var aboutJSON = '{"info": "This is karate at its finest!"}';
 var newStudentJSON = '{"info": "New Students get two free lessons."}';
 var glossaryJSON = '{"info": "first kata"}';
@@ -27,13 +53,37 @@ var formsJSON = '{"info": "forms to use"}';
 
 //Call to function with anonymous callback
 loadJSON(function(response) {
-	// Do Something with the response e.g.
-	jsonresponse = JSON.parse(response);
-	var hourOpen = jsonresponse.days + ": " + jsonresponse.open + " - " + jsonresponse.close;
-	document.getElementById("hoursText").innerHTML = "<h3>" + hourOpen + "</h3>";
+	var hourHeading = "<tr> <th>Day</th><th>Open</th><th>Close</th> </tr>";
+	var classHeading = "<tr> <th>Class</th><th>Day</th><th>Start</th><th>Finish</th> </tr>";
+	var tableData = "";
+	var classData = "";
+	var hoursResponse = JSON.parse(hoursJSON);
+	for (var key in hoursResponse) {
+		if (key == "Days") {
+			var daysOpen = hoursResponse[key];
+			for (var i = 0; i < daysOpen.length; i++) {
+				var row = "<tr> <td>" + daysOpen[i].day + "</td><td>" + daysOpen[i].open + "</td><td>" + daysOpen[i].close + "</td></tr> ";
+				tableData = tableData + row;
+			}
+		}
+		else if (key == "Classes") {
+			var classes = hoursResponse[key];
+			for (var i = 0; i < classes.length; i++) {
+				var row = "<tr> <td>" + classes[i].classes + "</td><td> " + classes[i].day + "</td><td>" + classes[i].start + "</td><td>" + classes[i].finish + "</td></tr> ";
+				classData = classData + row;
+			}
+		}
+	}
+	document.getElementById("hoursText").innerHTML = "<table>" + hourHeading + tableData + "</table>"; 
+	document.getElementById("classText").innerHTML = "<table>" + classHeading + classData + "</table>";
+
 
 	var contactResponse = JSON.parse(contactJSON);
-	var contactInfo = contactResponse.name + "<br>" + contactResponse.phone + "<br>" + contactResponse.email;
+	var contactInfo = contactResponse.name + "<br>"
+		+ "Address:" + "<br> " + contactResponse.address + "<br>"
+		+ "Call: <a href=\"tel:" + contactResponse.phone + "\">" + contactResponse.phone + "</a>" + "<br>" 
+		+ "Text: <a href=\"sms:" + contactResponse.phone + "\">" + contactResponse.phone + "</a>" + "<br>" 
+		+ "Email: <a href=\"mailto:" + contactResponse.email + "\">" + contactResponse.email + "</a>";
 	document.getElementById("contactText").innerHTML = "<h3>" + contactInfo + "</h3>";
 
 	var aboutResponse = JSON.parse(aboutJSON);

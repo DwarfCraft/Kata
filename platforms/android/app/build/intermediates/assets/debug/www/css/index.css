@@ -70,12 +70,36 @@ body {
 }
 
 h1 {
-    font-size:24px;
+    font-size:15px;
     font-weight:normal;
     margin:0px;
     overflow:visible;
     padding:0px;
     text-align:center;
+    color: orange;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-size:12px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-size:10px;
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 10px;
+}
+
+div {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    font-size: 10px;
 }
 
 .event {
@@ -114,28 +138,6 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-
-body {
-    background-color: black;
-}
-
-h1 {
-    color: orange;
-    text-align: center;
-}
-
-h2 {
-    color: #000000;
-    text-align: center;
-}
-
-p {
-    font-family: "Times New Roman";
-    font-size: 20px;
-}
-
-
-
 /* The alert message box */
 .alert {
     padding: 20px;
@@ -153,17 +155,12 @@ p {
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
-    font-size:30px;
+    font-size:35px;
 }
 
 /* When moving the mouse over the close button */
 .closebtn:hover {
     color: black;
-}
-
-div {
-    margin-bottom: 15px;
-    padding: 4px 12px;
 }
 
 .danger {

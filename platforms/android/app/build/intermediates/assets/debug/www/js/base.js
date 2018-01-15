@@ -20,35 +20,24 @@ $(document).ready(function(){
 /*
  * Programs & Class Schedule
 Lil Dragons Ages 6-7yrs.
-
 Beginner Kids Ages 8-13.
-
 Intermediate Kids Ages 8-13
-
 Advanced Kids Ages 8-13
-
 Beginner / Intermediate Adults
-
 Advanced Adults
-
 Tiger Team - Elite Competition Team 
-Monday: 3:00 – 8:00 PM 
-Tuesday: 3:00 – 8:00 PM 
-Wednesday: 3:00 – 8:00 PM 
-Thursday: 3:00 – 8:00 PM 
-Friday: Closed 
-Saturday: Closed 
-Sunday: Closed
 
 */
 //var hoursJSON = '{ "Hours" : [ { "Monday": [{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Tuesday":[{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Wednesday":[{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Thursday":[{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Friday":[{ "Start": "0900", "Finish": "1300" },{ "Start": "1400", "Finish": "1800" }]},{ "Saturday":[]},{ "Sunday":[]}]}';
 //var hoursJSON = '"Days": [{"Monday": ';
-var hoursJSON = '{"Days": [{ "day": "Monday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Tuesday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Wednesday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Thursday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Friday", "open": "Closed", "close": "Closed"},{ "day": "Saturday", "open": "Closed", "close": "Closed"},{ "day": "Sunday", "open": "Closed", "close": "Closed"}], "Classes": [{ "classes": "Beginner Adults", "day": "Monday", "start": "6:00PM", "finish": "6:45PM" }]}';
+var hoursJSON = '{"Days": [{ "day": "Monday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Tuesday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Wednesday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Thursday", "open": "3:00PM", "close": "8:00PM"},{ "day": "Friday", "open": "Closed", "close": "Closed"},{ "day": "Saturday", "open": "Closed", "close": "Closed"},{ "day": "Sunday", "open": "Closed", "close": "Closed"}], "Classes": [{ "classes": "Lil Dragons", "day": "Tuesday", "start": "5:00PM", "finish": "5:45PM" },{ "classes": "Lil Dragons", "day": "Thursday", "start": "5:00PM", "finish": "5:45PM" },{ "classes": "Intermediate Kids", "day": "Tuesday", "start": "5:45PM", "finish": "6:30PM" },{ "classes": "Intermediate Kids", "day": "Thursday", "start": "5:45PM", "finish": "6:30PM" },{ "classes": "Advanced Kids", "day": "Tuesday", "start": "6:30PM", "finish": "7:15PM" },{ "classes": "Advanced Kids", "day": "Thursday", "start": "6:30PM", "finish": "7:15PM" },{ "classes": "Intermediate Advanced Adults", "day": "Thursday", "start": "7:15PM", "finish": "8:00PM" },{ "classes": "Intermediate Advanced Adults", "day": "Thursday", "start": "7:15PM", "finish": "8:00PM" },{ "classes": "Beginner Kids", "day": "Monday", "start": "5:45PM", "finish": "6:30PM" },{ "classes": "Beginner Kids", "day": "Wednesday", "start": "5:45PM", "finish": "6:30PM" },{ "classes": "Beginner Adults", "day": "Monday", "start": "6:30PM", "finish": "7:15PM" },{ "classes": "Beginner Adults", "day": "Wednesday", "start": "6:30PM", "finish": "7:15PM" },{ "classes": "Teen Class", "day": "Monday", "start": "7:00PM", "finish": "8:00PM" },{ "classes": "Teen Class", "day": "Wednesday", "start": "7:00PM", "finish": "8:00PM" }]}';
 var testJSON = '{"hours": "","open": "8:00","close": "5:00","days": "Monday - Thursday"}';
-var contactJSON = '{"name": "Drew Taylor", "phone": "803-359-3632", "email": "skc@gmail.com", "address": "528 Columbia Ave <br>Lexington, SC 29072 <br>United States"}';
-var aboutJSON = '{"info": "This is karate at its finest!"}';
+var contactJSON = '{"name": "Drew Taylor", "phone": "803-359-3632", "email": "taylorsenseiskc@gmail.com", "subject": "Information Requested", "address": "528 Columbia Ave <br>Lexington, SC 29072 <br>United States"}';
+var aboutJSON = '{"info": "This is karate at its finest!", "programs": [{"name": "Lil Dragons", "info": "6-7 years"},{"name": "Beginner Kids", "info": "8-13 years"},{"name": "Intermediate Kids", "info": "8-13 years"},{"name": "Advanced Kids", "info": "8-13 years"},{"name": "Teen Class", "info": "13-18 years"},{"name": "Beginner / Intermediate Adults", "info": "13+ years"},{"name": "Advanced Adults", "info": "13+ years"}]}';
 var newStudentJSON = '{"info": "New Students get two free lessons."}';
 var glossaryJSON = '{"info": "first kata"}';
+var beltJSON = '{"belt": ["White", "Yellow", "Orange", "Green", "Blue", "Purpple", "Brown", "Black"]}';
+var kataJSON = '{"name": ["Heion Showdon", "Heion Neidon"]}';
 var formsJSON = '{"info": "forms to use"}';
 
 //Call to function with anonymous callback
@@ -80,16 +69,24 @@ loadJSON(function(response) {
 
 	var contactResponse = JSON.parse(contactJSON);
 	var contactInfo = contactResponse.name + "<br>"
-		+ "Address:" + "<br> " + contactResponse.address + "<br>"
+		+ "Address:" + "<br> <a href=\"geo:0,0?q=" + contactResponse.address + "\">" + contactResponse.address + "</a>" + "<br>"
 		+ "Call: <a href=\"tel:" + contactResponse.phone + "\">" + contactResponse.phone + "</a>" + "<br>" 
 		+ "Text: <a href=\"sms:" + contactResponse.phone + "\">" + contactResponse.phone + "</a>" + "<br>" 
-		+ "Email: <a href=\"mailto:" + contactResponse.email + "\">" + contactResponse.email + "</a>";
+		+ "Email: <a href=\"mailto:" + contactResponse.email + "?subject=" + contactResponse.subject + "\">" + contactResponse.email + "</a>";
 	document.getElementById("contactText").innerHTML = "<h3>" + contactInfo + "</h3>";
 
 	var aboutResponse = JSON.parse(aboutJSON);
 	var aboutInfo = aboutResponse.info + "<br>";
+	var aboutHeading = "<tr> <th>Name</th><th>Ages</th> </tr>";
+	var aboutData = "";
+	for (var key in aboutResponse.programs) {
+		var program = aboutResponse.programs[key];
+		var row = "<tr> <td>" + aboutResponse.programs[key].name + "</td><td>" + aboutResponse.programs[key].info + "</td></tr> ";
+		aboutData = aboutData + row;
+	}
 	document.getElementById("aboutText").innerHTML = "<h3>" + aboutInfo + "</h3>";
-
+	document.getElementById("programText").innerHTML = "<table>" + aboutHeading + aboutData + "</table>";
+	
 	var newStudentResponse = JSON.parse(newStudentJSON);
 	var newStudentInfo = aboutResponse.info + "<br>";
 	document.getElementById("newStudentText").innerHTML = "<h3>" + newStudentInfo + "</h3>";

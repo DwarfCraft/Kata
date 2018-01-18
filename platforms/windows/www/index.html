@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/w3.css">
+        <title>Shotokan Karate</title>
+    </head>
+ <body>
+ <div id="mySidenav" class="w3-blue w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-right ">
+  <span id="menuClose" class="closebtn">&times;</span>
+  <a id="menuHome" href="#" class="w3-button w3-bar-item menu">Home</a>
+  <a id="menuHours" href="#" class="w3-button w3-bar-item menu">Hours</a>
+  <a id="menuAbout" href="#" class="w3-button w3-bar-item menu">About</a>
+  <a id="menuContact" href="#" class="w3-button w3-bar-item menu">Contact</a>
+  <a id="menuNewStudent" href="#" class="w3-button w3-bar-item menu">New Student</a>
+  <a id="menuGlossary" href="#" class="w3-button w3-bar-item menu">Glossary</a>
+  <a id="menuForms" href="#" class="w3-button w3-bar-item menu">Forms</a>
+</div>
+<div id="header" class="w3-container">
+  <p><img src="img/skc-Logo.png" height="30"/>Shotokan Karate Centers
+  <span id="menuButton" class="w3-right" style="font-size:30px;cursor:pointer">&#9776;</span>
+  </p>
+</div>
+<div id="alert" class="alert">
+  <span class="closebtn">&times;</span> 
+  This is an alert box.
+</div>
+<div id="infoBlock" class="info">
+  <p><strong>Coming soon</strong> We will be having a party!</p>
+</div>
+<div id="pages">
+<h1></h1>
+<div id="hours" class="options page"> 
+  <h2>Hours of Operation:</h2>
+  <div id="hoursText"></div> 
+  <h2>Class Schedule:</h2>
+  <div id="classText"></div> 
+</div>
+<div id="contact" class="options page"> 
+  <h2>Contact Information:</h2>
+  <div id="contactText"></div>
+</div>
+<div id="about" class="options page">
+  <h2>About:</h2> 
+  <div id="aboutText"></div> 
+  <h2>Programs:</h2>
+  <div id="programText"></div>
+</div>
+<div id="newStudent" class="options page">
+  <h2>New Student:</h2> 
+  <div id="newStudentText"></div> 
+</div>
+<div id="glossary" class="options page">
+  <h2>Glossary:</h2> 
+  <div id="glossaryText"></div> 
+</div>
+<div id="forms" class="options page">
+  <h2>Forms:</h2> 
+  <div id="formsText"></div> 
+</div>
+</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/base.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

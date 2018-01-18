@@ -1,0 +1,17 @@
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\debug\anycpu\win8.1\resources.pri
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\debug\anycpu\win8.1\AppxManifest.xml
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\debug\anycpu\win8.1\CordovaApp.Windows.build.appxrecipe
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\priconfig.xml
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\priconfig.xml.intermediate
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\layout.resfiles
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\layout.resfiles.intermediate
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\resources.resfiles
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\resources.resfiles.intermediate
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\pri.resfiles
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\pri.resfiles.intermediate
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\qualifiers.txt
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\qualifiers.txt.intermediate
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\ProjectArchitectures.txt
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\package.map.txt
+C:\Users\Adam\Source\Repos\Kata\platforms\windows\build\windows\bld\_pkginfo.txt

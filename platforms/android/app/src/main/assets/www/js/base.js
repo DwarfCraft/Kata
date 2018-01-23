@@ -36,7 +36,7 @@ var contactJSON = '{"name": "Drew Taylor", "phone": "803-359-3632", "email": "ta
 var aboutJSON = '{"info": "This is karate at its finest!", "programs": [{"name": "Lil Dragons", "info": "6-7 years"},{"name": "Beginner Kids", "info": "8-13 years"},{"name": "Intermediate Kids", "info": "8-13 years"},{"name": "Advanced Kids", "info": "8-13 years"},{"name": "Teen Class", "info": "13-18 years"},{"name": "Beginner / Intermediate Adults", "info": "13+ years"},{"name": "Advanced Adults", "info": "13+ years"}]}';
 var newStudentJSON = '{"info": "New Students get two free lessons."}';
 var glossaryJSON = '{"info": "first kata"}';
-var beltJSON = '{"belt": ["White", "Yellow", "Orange", "Green", "Blue", "Purpple", "Brown", "Black"]}';
+var beltJSON = '{"belt": ["White", "Yellow", "Orange", "Green", "Blue", "Purple", "Brown", "Black"]}';
 var kataJSON = '{"name": ["Heion Showdon", "Heion Neidon"]}';
 var formsJSON = '{"info": "forms to use"}';
 

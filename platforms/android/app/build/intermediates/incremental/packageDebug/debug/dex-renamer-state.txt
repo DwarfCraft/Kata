@@ -1,4 +1,4 @@
-#Tue Jan 23 11:56:22 EST 2018
+#Wed Jan 24 18:10:45 EST 2018
 base.0=/home/adam/git/Kata/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 file.0=/home/adam/git/Kata/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

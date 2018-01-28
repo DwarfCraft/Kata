@@ -131,6 +131,13 @@ div {
     -webkit-animation:fade 3000ms infinite;
 }
 
+.header {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
 /* The alert message box */
 .alert {
     padding: 20px;
@@ -148,7 +155,7 @@ div {
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
-    font-size:35px;
+    font-size:30px;
 }
 
 /* When moving the mouse over the close button */

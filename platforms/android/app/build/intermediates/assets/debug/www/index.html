@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https://static.wixstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' https://static.wixstatic.com data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -38,7 +38,7 @@
     </head>
  <body>
  <div id="mySidenav" class="w3-blue w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-right ">
-  <span id="menuClose" class="closebtn">&times;</span>
+  <span id="menuClose" class="closebtn w3-right">&times;</span>
   <a id="menuHome" href="#" class="w3-button w3-bar-item menu">Home</a>
   <a id="menuHours" href="#" class="w3-button w3-bar-item menu">Hours</a>
   <a id="menuAbout" href="#" class="w3-button w3-bar-item menu">About</a>
@@ -57,7 +57,7 @@
   This is an alert box.
 </div>
 <div id="infoBlock" class="info">
-  <p><strong>Coming soon</strong> We will be having a party!</p>
+  <p><strong>Info</strong>Providing excellence in martial arts instruction to Lexington and its surrounding areas since 1994.</p>
 </div>
 <div id="pages">
 <h1></h1>

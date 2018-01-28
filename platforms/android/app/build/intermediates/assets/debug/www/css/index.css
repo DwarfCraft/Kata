@@ -63,7 +63,7 @@ body {
 }
 
 h1 {
-    font-size:15px;
+    font-size:12px;
     font-weight:normal;
     margin:0px;
     overflow:visible;
@@ -75,18 +75,17 @@ h1 {
 h2 {
     color: black;
     text-align: center;
-    font-size:12px;
+    font-size:10px;
 }
 
 h3 {
     color: white;
     text-align: center;
-    font-size:10px;
+    font-size:8px;
 }
 
 p {
-    font-family: "Times New Roman";
-    font-size: 10px;
+    font-size: 8px;
 }
 
 div {
